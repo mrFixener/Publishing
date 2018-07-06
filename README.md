@@ -25,7 +25,7 @@ gradle bootrun
 
 Просмотр всех авторов
 ================
-GET endpoint [server:port]/authors
+GET endpoint **[server:port]/authors**
 
 #### Пример запроса
 ```shell
