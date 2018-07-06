@@ -25,7 +25,7 @@ gradle bootrun
 
 Просмотр всех авторов
 ================
-GET endpoint [server:port]//authors
+GET endpoint [server:port]/authors
 
 #### Пример запроса
 ```shell
@@ -54,3 +54,44 @@ http://localhost:8080/authors
         }
 ```
 
+Просмотр краткой инфо об авторе
+================
+GET endpoint [server:port]/authors
+
+#### Пример запроса
+```shell
+http://localhost:8080/author/info/short/2
+```
+#### Ответ
+```json
+{
+    "firstName": "Gary",
+    "lastName": "Cornell",
+    "age": 56,
+    "listBooks": [
+        "Java. Library professional",
+        "Java. Library professional. Volume 2"
+    ]
+}
+```
+
+Создание автора
+================
+POST endpoint [server:port]/authors
+
+#### Пример запроса
+```shell
+http://localhost:8080/author/info/short/2
+```
+#### Ответ
+```json
+{
+    "firstName": "Gary",
+    "lastName": "Cornell",
+    "age": 56,
+    "listBooks": [
+        "Java. Library professional",
+        "Java. Library professional. Volume 2"
+    ]
+}
+```
