@@ -22,7 +22,7 @@ gradle bootrun
 Авторизация приложения
 ================
 Приложение использует Basic Authorization (см. пример ниже).
-<p align="right">
+<p align="left">
   <img width="460" height="300" src="https://ibb.co/bC7CKy">
 </p>
 
