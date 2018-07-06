@@ -22,5 +22,5 @@ gradle bootrun
 Авторизация приложения
 ================
 Приложение использует Basic Authorization (см. пример ниже).
-![Markdown Mode Screenshot](https://ibb.co/bC7CKy)
+![Basic Authorization](https://ibb.co/bC7CKy)
 
