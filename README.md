@@ -23,4 +23,34 @@ gradle bootrun
 ================
 Приложение использует Basic Authorization (<a target="_blank" rel="noopener noreferrer" href="https://ibb.co/bC7CKy">см. пример здесь</a>).
 
+Просмотр всех авторов
+================
+GET endpoint [server:port]//authors
+
+#### Пример запроса
+```shell
+http://localhost:8080/authors
+```
+#### Ответ
+```json
+{
+    "content": [
+     {
+            "id": 2,
+            "firstName": "Gary",
+            "lastName": "Cornell",
+            "sex": "MALE",
+            "rewards": [
+                {
+                    "id": 31,
+                    "year": 2016,
+                    "title": "America Award"
+                }
+            ],
+            "birthDate": "1961-09-24T22:00:00.000+0000"
+        }
+        ]
+        //.......................
+        }
+```
 
