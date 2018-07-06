@@ -255,7 +255,6 @@ DELETE endpoint **[server:port]/author/delete/{authorId}**
 http://localhost:8080/author/delete/12
 ```
 
-================
 Просмотр всех книг
 ================
 GET endpoint **[server:port]/books**
@@ -363,4 +362,157 @@ http://localhost:8080/books
         ]
         //.......................
         }
+```
+Создание книги (только для пользователя с ролью ADMIN)
+================
+POST endpoint **[server:port]/book/create**
+#### Пример запроса
+```shell
+http://localhost:8080/book/create
+
+{
+	"title":"Draft book",	"isbn":"0000-1111-2222-3333",	"genre":"FANTASY"
+}
+```
+#### Ответ
+```json
+{
+    "id": 6,
+    "title": "Draft book",
+    "isbn": "0000-1111-2222-3333",
+    "genre": "FANTASY",
+    "authors": []
+}
+```
+Обновление книги (только для пользователя с ролью ADMIN)
+================
+PUT endpoint **[server:port]/book/update/{bookId}**
+{bookId} - id книги
+#### Пример запроса
+```shell
+http://localhost:8080/book/update/6
+
+{
+	"authors":[{
+            "id": 2,
+            "firstName": "Gary",
+            "lastName": "Cornell",
+            "sex": "MALE",
+            "birthDate": "1961-09-25"
+	}]
+}
+```
+#### Ответ
+```json
+{
+    "id": 6,
+    "title": "Draft book",
+    "isbn": "0000-1111-2222-3333",
+    "genre": "FANTASY",
+    "authors": [
+        {
+            "id": 2,
+            "firstName": "Gary",
+            "lastName": "Cornell",
+            "sex": "MALE",
+            "books": [
+                {
+                    "id": 3,
+                    "title": "Java. Library professional",
+                    "isbn": "978-5-94074-920-3",
+                    "genre": "PROGRAMMING",
+                    "authors": [
+                        {
+                            "id": 1,
+                            "firstName": "Cay",
+                            "lastName": "S. Hostmann",
+                            "sex": "MALE",
+                            "books": [
+                                {
+                                    "id": 1,
+                                    "title": "Scala for the impatient",
+                                    "isbn": "978-5-94074-920-2",
+                                    "genre": "PROGRAMMING",
+                                    "authors": [
+                                        1
+                                    ]
+                                },
+                                {
+                                    "id": 2,
+                                    "title": "Core Java for the impatient",
+                                    "isbn": "123-456-789",
+                                    "genre": "PROGRAMMING",
+                                    "authors": [
+                                        1
+                                    ]
+                                },
+                                3,
+                                {
+                                    "id": 4,
+                                    "title": "Java. Library professional. Volume 2",
+                                    "isbn": "978-5-94074-920-4",
+                                    "genre": "PROGRAMMING",
+                                    "authors": [
+                                        1,
+                                        2,
+                                        {
+                                            "id": 9,
+                                            "firstName": "TestName",
+                                            "lastName": "TestLastName",
+                                            "sex": "FEMALE",
+                                            "books": [
+                                                3,
+                                                4
+                                            ],
+                                            "rewards": [],
+                                            "birthDate": "1993-07-04T21:00:00.000+0000"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "rewards": [
+                                {
+                                    "id": 32,
+                                    "year": 2010,
+                                    "title": "Best Author"
+                                }
+                            ],
+                            "birthDate": "1959-06-15T22:00:00.000+0000"
+                        },
+                        2,
+                        9
+                    ]
+                },
+                4,
+                {
+                    "id": 6,
+                    "title": "Draft book",
+                    "isbn": "0000-1111-2222-3333",
+                    "genre": "FANTASY",
+                    "authors": [
+                        2
+                    ]
+                }
+            ],
+            "rewards": [
+                {
+                    "id": 31,
+                    "year": 2016,
+                    "title": "America Award"
+                }
+            ],
+            "birthDate": "1961-09-25T00:00:00.000+0000"
+        }
+    ]
+}
+```
+
+Удаление книги (только для пользователя с ролью ADMIN)
+================
+DELETE endpoint **[server:port]/book/delete/{bookId}**
+{bookId} - id книги
+
+#### Пример запроса
+```shell
+http://localhost:8080/book/delete/6
 ```
