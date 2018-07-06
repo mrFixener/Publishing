@@ -121,7 +121,7 @@ http://localhost:8080/author/update/12
 
 {
 	"books":  [{"id": 1, "title":"Scala for the impatient", "isbn":"978-5-94074-920-2", "genre":"PROGRAMMING"}],
-	"rewards":[{"id": 31, "year": 2014, "title": "Best author"}]
+	"rewards":[{"id": 36, "year": 2014, "title": "Best author"}]
 }
 ```
 #### Ответ
