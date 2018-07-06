@@ -75,7 +75,7 @@ http://localhost:8080/author/info/short/2
 }
 ```
 
-Создание автора (только пользователя с ролью ADMIN)
+Создание автора (только для пользователя с ролью ADMIN)
 ================
 POST endpoint **[server:port]/author/create**
 genre - [MALE,FEMALE]
@@ -110,7 +110,7 @@ http://localhost:8080/author/create
 }
 ```
 
-Обновление автора (только пользователя с ролью ADMIN)
+Обновление автора (только для пользователя с ролью ADMIN)
 ================
 PUT endpoint **[server:port]/author/update/{authorId}**
 {authorId} - id автора
@@ -245,7 +245,7 @@ http://localhost:8080/author/update/12
 }
 ```
 
-Удаление автора (только пользователя с ролью ADMIN)
+Удаление автора (только для пользователя с ролью ADMIN)
 ================
 DELETE endpoint **[server:port]/author/delete/{authorId}**
 {authorId} - id автора
