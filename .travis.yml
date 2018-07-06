@@ -1,0 +1,7 @@
+language: java
+script: gradle build -x test 
+jdk:
+  - oraclejdk8
+branches:
+   only:
+     - master
