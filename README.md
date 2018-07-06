@@ -21,6 +21,6 @@ gradle bootrun
 ```
 Авторизация приложения
 ================
-Приложение использует Basic Authorization (<a href="https://ibb.co/bC7CKy">см. пример ниже</a>).
+Приложение использует Basic Authorization (<a href="https://ibb.co/bC7CKy" target="_blank">см. пример здесь</a>).
 
 
